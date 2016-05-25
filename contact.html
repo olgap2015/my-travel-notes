@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <!--
+          My Travel Notes/Contact Me Page
+          Author: Olga Ivancic
+          Date:   10/28/2015
+
+          Filename:         contact.html
+          Supporting files: styles.css, logo.png
+    -->
+        <title>My Travel Notes</title>
+
+        <meta charset="UTF-8" />
+
+        <link href="styles.css" rel="stylesheet" type="text/css" />
+        
+        <script src="jquery.min.js"></script>
+        <script src="jquery.validate.min.js"></script>
+        <script src="additional-methods.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                    $(':text:first').focus();
+                    $('#contactForm').validate({
+                            debug : true,
+                            focusInvalid : true,
+                            rules : {
+                                name : {
+                                    required : true
+                                },
+                                comment : {
+                                    required : true
+                                },
+                                email : {
+                                    required : true,
+                                    email : true,
+                                    extension : "com|org|net"
+                                }
+                            }, // end rules
+                            messages : {
+                                name : {
+                                    required : "Please, enter your name"
+                                },
+                                comment : {
+                                    required : "Please, enter a comment"
+                                },
+                                email : {
+                                    required : "Please, enter your email address",
+                                    email : "Please, enter a valid email address",
+                                    extension : "A valid email address should end with \".com\", \".org\" or \".net\""
+                                }
+                            }, // end messages
+                            errorPlacement : function(error, element) {
+                                if (element.is("#comment")) {
+                                        error.appendTo('#commentLabel');
+                                } else {
+                                    error.insertAfter(element);
+                                }
+                            } // end errorPlacement
+                    }); // end validate
+            }); // end ready
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <img id="logo-image" src="logo.png" alt="logo" usemap="#logomap" />
+
+            <map name="logomap">
+                <area shape="rect" coords="244, 24, 851, 147"
+                 href="home.html" alt="Introduction Page" />
+                <area shape="circle" coords="100, 73, 72"
+                 href="home.html" alt="Introduction Page" />
+            </map>
+
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="home.html"
+                       title="Home Page">
+                       About Me</a>
+                </li>
+                <li><a href="latvia.html"
+                       title="Page about Latvia">
+                       Latvia</a>
+                </li>
+                <li><a href="moldova.html"
+                       title="Page about Moldova">
+                       Moldova</a>
+                </li>
+                <li><a href="belarus.html"
+                       title="Page about Belarus">
+                       Belarus</a>
+                </li>
+                <li><a href="sicily.html"
+                       title="Page about Italy">
+                       Sicily</a>
+                </li>
+                <li><a class="active-link"
+                       href="contact.html"
+                       title="Contact me Page">
+                       Contact Me</a>
+                </li>
+            </ul>
+        </nav>
+
+        <section>
+            <header>
+                <h1>Contact Me</h1>
+            </header>
+
+            <article>
+                <form action="http://olgaivancic.com/contact-submit.html" method="post" id="contactForm" name="contactForm">
+                    <fieldset id="contact">
+                        <legend>Please, fill in the form to send me a message</legend>
+                        
+                        <div class="input-div">
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name" />
+                        </div>
+                        
+                        <div class="input-div">
+                        <label for="email">E-mail:</label>
+                        <input type="text" name="email" id="email" />
+                        </div>
+                        
+                        <div class="textarea-div">
+                        <label for="comment" id="commentLabel">Type your message below:</label>
+                        <textarea name="comment" id="comment"></textarea>
+                        </div>
+                        
+                        <p><input type="submit" value="Send" name="submit" id="submit" /></p>
+                    </fieldset>
+                </form>
+            </article>
+        </section>
+
+        <footer>
+            &copy; 2015-2016 &nbsp;&nbsp;Olga Ivancic &nbsp;&nbsp;All Rights Reserved
+        </footer>
+    </body>
+
+</html>

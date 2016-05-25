@@ -1,0 +1,216 @@
+﻿/* 
+	My Travels Site Style Sheet
+	Author: Olga Ivancic
+	Date:   07/27/2015
+
+	Filename:         styles.css
+	Supporting Files: maps.jpg
+
+*/
+
+/*
+fieldset * {
+    outline: 1px solid red;
+}
+*/
+body {
+	background-image: url(maps.jpg);
+	background-repeat: repeat;
+    font-family: Georgia, serif;    
+    line-height: 1.5em;
+	margin: auto auto;
+	width: 1000px;
+}
+
+form p {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+div.input-div {
+    height: 50px;
+}
+
+div.textarea-div {
+    height: 204px;
+}
+
+fieldset {
+    width: 70%;
+}
+
+header {
+	float: left;
+	margin: 0px;
+}
+
+header img {
+	opacity: 0.9;
+}
+
+input {
+    display: block;
+    float: left;
+    margin-bottom: 0px;
+    margin-right: 150px;
+    width: 50%;
+}
+
+input[type="submit"] {
+    display: inline;
+    float: none;
+    margin-left: 140px;
+    margin-bottom: 0px;
+    text-align: center;
+    width: 60px;
+}
+
+input.error {
+    background: #F3EAEA;
+    border: 1px solid red;
+}
+    
+label {
+    clear: left;
+    display: block;
+    float: left;
+    margin-bottom: 0px;
+    width: 15%;
+}
+
+label.error {
+    color: red;
+    font-size: 14px;
+    margin-left: 85px;
+    margin-top: 0px;
+    width: 100%;
+}
+
+#commentLabel {
+    width: 50%;
+}
+nav {
+	background-color: rgba(255,255,255,0.8);
+	clear: left;
+	float: left;
+	margin-top: 0px;
+	padding: 0px;
+	width: 200px;
+}
+
+nav ul {
+	list-style: none;
+	padding: 0px;
+}
+
+nav a {
+	color: black;
+	display: block;
+	font-size: 1.2em;
+	font-variant: small-caps;
+	line-height: 2.2em;
+	text-decoration: none;
+	text-indent: 1em;
+}
+
+nav a:hover {
+	background-color: rgba(105,105,105,0.8);
+	color: rgba(255,255,255, 0.7);
+}
+
+nav a.active-link {
+	background-color: rgba(139,0,0,0.7);
+	color: rgba(255,255,255,0.7);
+	display: block;
+	font-size: 1.2em;
+	font-variant: small-caps;
+	font-weight: bold;
+	line-height: 2.2em;
+	text-decoration: none;
+	text-indent: 1em;
+}
+
+nav a.active-link:hover {
+	background-color: rgba(105,105,105,0.8);
+	color: rgba(255,255,255,0.7);
+	display: block;
+	font-size: 1.2em;
+	font-variant: small-caps;
+	font-weight: bold;
+	line-height: 2.2em;
+	text-decoration: none;
+	text-indent: 1em;
+}
+
+section {
+	background-color: rgba(255, 255, 255, 0.9);
+	float: left;
+	margin-left: 10px;
+	width: 79%;
+}
+
+section header {
+	background-color: rgba(139,0,0,0.7);
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 1.3em;
+	float: left;
+	font-variant: small-caps;
+	letter-spacing: 4pt; 
+	line-height: 0.2em;
+	text-indent: 1em;
+	width: 100%
+}
+
+section img.odd {
+	float: right;
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+section img.even {
+	float: left;
+	margin-right: 30px;
+	margin-top: 0px;
+	margin-left: 10px;
+	margin-bottom: 20px;
+}
+
+section article {
+	display: block;
+	clear: both;
+	padding: 10px;
+}
+
+#submission {
+    height: 208px;
+}
+
+.submission {
+    margin-left: 15px;
+}
+textarea {
+    display: block;
+    height: 150px;
+    margin-bottom: 0px;
+    margin-left: 80px;
+    resize: none;
+    width: 70%;
+}
+
+textarea.error {
+    background: #F3EAEA;
+    border: 1px solid red;
+}
+
+footer {
+	background-color: rgba(255, 255, 255, 0.9);
+	clear: right;
+	float: right;
+	font-size: 0.8em;
+	margin-top: 5px;
+	padding-right: 10px;
+	text-align: right;
+	width: 78%;
+}
